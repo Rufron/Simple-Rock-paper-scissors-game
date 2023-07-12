@@ -18,7 +18,7 @@ const game = () => {
     //Play Match
     const playMatch = () => {
       const options = document.querySelectorAll(".options button");
-      const playerHand = document.querySelectorAll(".player-hand");
+      const playerHand = document.querySelector(".player-hand");
       const computerHand = document.querySelector(".computer-hand");
       const hands = document.querySelectorAll('.hands img');
 
@@ -53,7 +53,7 @@ const game = () => {
 
     const updateScore = () =>{
         const playerScore = document.querySelector('.player-score p');
-        const computerScore = document.querySelelctor('.computer-score p');
+        const computerScore = document.querySelector('.computer-score p');
       playerScore.textContent = pScore;
       computerScore.textContent = cScore;
     };
@@ -71,14 +71,14 @@ const game = () => {
         //check for Rock
         if(playerChoice === 'rock'){
             if(computerChoice === 'scissors'){
-                winner.textContent = 'Player Wins'
+                winner.textContent = 'Player Wins';
                 pScore++;
-                updateScore() 
+                updateScore();
                 return;
             }else{
                 winner.textContent = 'Computer Wins';
                 cScore++;
-                updateScore()
+                updateScore();
                 return;
             }
         }
@@ -86,14 +86,14 @@ const game = () => {
         //check for paper
         if(playerChoice === 'paper'){
             if(computerChoice === 'scissors'){
-                winner.textContent = 'Computer Wins'
+                winner.textContent = 'Computer Wins';
                 cScore++;
-                updateScore()
+                updateScore();
                 return;
             }else{
                 winner.textContent = 'Player Wins';
                 pScore++;
-                updateScore()
+                updateScore();
                 return;
             }
         }
@@ -101,14 +101,14 @@ const game = () => {
         //check for scissors
         if(playerChoice === 'scissors'){
             if(computerChoice === 'rock'){
-                winner.textContent = 'Computer Wins'
+                winner.textContent = 'Computer Wins';
                 cScore++;
-                updateScore()
+                updateScore();
                 return;
             }else{
                 winner.textContent = 'Player Wins';
                 pScore++;
-                updateScore()
+                updateScore();
                 return;
             }
         }
